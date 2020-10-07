@@ -1,4 +1,4 @@
-variable "name" {
+variable "rule_collection_name" {
   description = "description"
   type        = string
 }
