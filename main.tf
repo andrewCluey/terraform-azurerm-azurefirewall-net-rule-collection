@@ -12,7 +12,7 @@ resource "azurerm_firewall_network_rule_collection" "fw_net_rule" {
     for_each = var.rule
     content {
       name                  = rule.value.name                  # string
-      source_addresses      = rule.value.source_address        # list ["10.0.0.0/16",]
+      source_addresses      = rule.value.source_addresses      # list ["10.0.0.0/16",]
       destination_ports     = rule.value.destination_ports     # list ["53",]
       destination_addresses = rule.value.destination_addresses # list ["8.8.8.8","8.8.4.4",]
       protocols             = rule.value.protocols             # list ["TCP","UDP",]
