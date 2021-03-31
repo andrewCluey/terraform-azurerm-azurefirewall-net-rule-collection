@@ -11,11 +11,11 @@ resource "azurerm_firewall_network_rule_collection" "fw_net_rule" {
   dynamic "rule" {
     for_each = var.rule
     content {
-      name                  = lookup(rule.value, "name", null)                  # string
-      source_addresses      = lookup(rule.value, "source_addresses", null)      # list ["10.0.0.0/16",]
-      destination_ports     = lookup(rule.value, "destination_ports", null)     # list ["53",]
-      destination_addresses = lookup(rule.value, "destination_addresses", null) # list ["8.8.8.8","8.8.4.4",]
-      protocols             = lookup(rule.value, "protocols", null)             # list ["TCP","UDP",]
+      name                  = rule.value.name                  # string
+      source_addresses      = rule.value.source_address        # list ["10.0.0.0/16",]
+      destination_ports     = rule.value.destination_ports     # list ["53",]
+      destination_addresses = rule.value.destination_addresses # list ["8.8.8.8","8.8.4.4",]
+      protocols             = rule.value.protocols             # list ["TCP","UDP",]
     }
   }
 }
