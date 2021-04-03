@@ -25,14 +25,3 @@ resource "azurerm_firewall_network_rule_collection" "fw_net_rule" {
     }
   }
 }
-
-
-
-name - (Required) Specifies the name of the Network Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.
-
-azure_firewall_name - 
-
-
-
-
-rule 

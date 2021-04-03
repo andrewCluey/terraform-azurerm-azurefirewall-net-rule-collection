@@ -26,4 +26,3 @@ variable "rule_action" {
 variable "rule" {
   description = "A list of rules to add to the new collection. See Readme.md for an example of how to format this input parameter."
 }
-
