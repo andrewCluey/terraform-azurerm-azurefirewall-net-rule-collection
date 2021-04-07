@@ -20,7 +20,7 @@ variable "rule_priority" {
 
 variable "rule_action" {
   description = "(Required) Specifies the action the rule will apply to matching traffic. Possible values are Allow and Deny."
-  type        = string
+  type        = number
 }
 
 variable "rule" {
